@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Car Comparision</title>
+<style>
+.registerbtn {
+background-color: #808080;
+color: white;
+padding: 6px 20px;
+margin: 18px 0;
+border: none;
+cursor: pointer;
+width: 5%;
+opacity: 0.9;
+}
+input[type=text] {width: 15%;
+padding: 10px 15px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+input[type=email] {
+width: 15%;
+padding: 10px 15px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+input[type=Password] {
+width: 15%;
+padding: 10px 15px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+.registerbtn:hover {
+opacity: 1;
+}
+.signin {
+background-color:black ;
+text-align: center;
+}
+</style>
+<body style="text-align:center;background-color:black">
+<form action="http://localhost:8080/538/userregister.jsp" method="post">
+<div class="image">
+<img src="http://localhost/img/hacker.jpg" style="width:50%" alt="Avatar" class="avatar">
+</div>
+<h2 style="color:#808080;">Please Fill The Form To Register </h2>
+<div class="form">
+<label for="firstname"><b style="color:#808080;">First name</b></label>
+<input type="text" placeholder="Enter First name" name="firstname" required>
+<br>
+<br>
+<label for="lastname"><b style="color:#808080;">Last name</b></label>
+<input type="text" placeholder="Enter Last name" name="lastname" required>
+<br>
+<br>
+<label for="username"><b style="color:#808080;">User name</b></label>
+<input type="text" placeholder="Enter User name" name="username" required>
+<br><br>
+<label for="emailid"><b style="color:#808080;">Email Id</b></label>
+<input type="email" placeholder="Enter Email Id" name="emailid" required>
+<br>
+<br>
+<label for="password"><b style="color:#808080;">Password</b></label>
+<input type="password" placeholder="Enter Password" name="password" required>
+<br>
+<button type="submit"class="registerbtn">Register</button>
+<button type="reset" class="registerbtn">Cancel</button>
+<span class="password"><a href="#" style="color:#808080;">Forgot password?</a></span>
+</div>
+<div class="container signin">
+<p style="color:white;">Already have an account? <a
+href="http://localhost:8080/538/comparision.html" style="color:#808080;">Sign in</a>.</p>
+</div>
+</form>
+</body>
+</html>

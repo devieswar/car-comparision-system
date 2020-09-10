@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>Car Comparision</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<style>
+h1 {
+background-color:
+#808080;
+}
+.content{margin-left:auto;margin-right:auto}.content{max-width:900px;max-height: 600px;}
+.mySlides {display:none;}.registerbtn {
+background-color: #808080;
+color: white;
+padding: 6px 60px;
+margin: 18px 0;
+border: none;
+cursor: pointer;
+width: 5%;
+opacity: 0.9;
+}
+.registerbtn:hover {
+opacity: 1;
+}
+input[type=text] {
+width: 35%;
+padding: 10px 12px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+input[type=Password] {
+width: 35%;
+padding: 10px 12px;
+margin: 8px 0;
+box-sizing: border-box;
+}
+</style>
+<body class="dev" style="background-color:white;">
+<div class="heading">
+<h1 style="text-align:center;color:white;">Car Camparision System</h1>
+</div>
+<div class="container">
+<div class="content " style="max-width:400px">
+<img class="mySlides " src="http://localhost:8080/img/ford.jpeg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/volkswagen.jpeg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/mitsubishi.jpeg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/bmw.jpeg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/hyudai.jpeg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/tata.jpg" style="width:100%">
+<img class="mySlides " src="http://localhost:8080/img/mahidra.jpeg" style="width:100%"></div>
+</div>
+<div>
+<h2 style="text-align:center;color:gray;">Compare Cars After Login to User Account</h2>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}
+x[myIndex-1].style.display = "block";
+setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<div class="admin" style="max-width: auto; max-height:auto; background-color: white;
+float:left;">
+<h2>Admin Login </h2>
+<form action="http://localhost:8080/538/adminlogin.jsp" method="post">
+<div class="imgcontainer">
+<img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Xs0hMUFLJJcIMgPIE_vmlKH
+dqNvXyqQqdtxR7YpnAO9Pr8np" alt="Avatar" class="avatar">
+</div>
+<div class="container">
+<label for="username"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="username" required>
+<br>
+<br>
+<label for="password"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="password" required>
+<label><input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+<br>
+<button type="submit" class="registerbtn">Login</button>
+<button type="reset" class="registerbtn">Cancel</button>
+<br>
+<span class="password"><a href="#"style="color:#808080;">Forgot password?</a></span>
+</div>
+</form>
+</div>
+<div class="user" style="width: 50%; height: 50%; background-color: white; float:right">
+<h2>User Login </h2>
+<form action="http://localhost:8080/538/login.jsp" method="post">
+<div class="imgcontainer">
+<img src="http://localhost:8080/img/download.png" alt="Avatar" class="avatar">
+</div>
+<div class="container">
+<label for="username"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="username" required>
+<br>
+<br>
+<label for="password"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="password" required>
+<label>
+<input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+<br>
+<button type="submit" class="registerbtn">Login</button>
+<button type="reset" class="registerbtn">Cancel</button>
+<br>
+<span class="password"style="color:#808080;"> <a href="#"style="color:#808080;">Forgot
+password?</a></span>
+<br>
+<h5> If You Don't Have An Account</h5>
+<a href="http://localhost:8080/538/register.html" style="color:#808080;">Register Here</a>
+</div>
+</form>
+</div>
+</body>
+</html>
